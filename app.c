@@ -62,6 +62,8 @@ void initTraceETM(void)
 
   GPIO->TRACEROUTEPEN = GPIO_TRACEROUTEPEN_TRACECLKPEN | GPIO_TRACEROUTEPEN_TRACEDATA0PEN;
 #else
+  GPIO_PinModeSet(ETMCLK_PORT, ETMCLK_PIN, gpioModePushPull, 0);
+  GPIO_PinModeSet(ETMD0_PORT, ETMD0_PIN, gpioModePushPull, 0);
   GPIO_PinModeSet(ETMD1_PORT, ETMD1_PIN, gpioModePushPull, 0);
   GPIO_PinModeSet(ETMD2_PORT, ETMD2_PIN, gpioModePushPull, 0);
   GPIO_PinModeSet(ETMD3_PORT, ETMD3_PIN, gpioModePushPull, 0);
