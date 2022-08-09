@@ -84,6 +84,7 @@ void initTraceETM(void)
  ******************************************************************************/
 void app_init(void)
 {
+  initTraceETM();//Initialize ETM
 }
 
 
